@@ -23,14 +23,6 @@ def clear():
     display.delete(0, tk.END)
     display.insert(0, "0")
 
-# def backspace():
-#     # Get the index of the very last character
-#     last_char_index = len(display.get()) - 1
-    
-#     # Delete ONLY that one character
-#     if last_char_index >= 0:
-#         display.delete(last_char_index)
-
 def backspace():
     current = display.get()
     display.delete(0, tk.END)
@@ -43,14 +35,6 @@ def backspace():
         display.insert(0, "0")
     else:
         display.insert(0, new_value)
-
-# def percent():
-#     try:
-#         value = float(display.get())
-#         display.delete(0, tk.END)
-#         display.insert(0, value / 100)
-#     except ValueError:
-#         pass
 
 def percent():
     expr = display.get()
